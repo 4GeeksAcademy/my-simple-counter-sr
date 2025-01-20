@@ -1,7 +1,5 @@
 import React from "react";
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faClock } from '@fortawesome/free-solid-svg-icons'; 
-library.add(faClock); 
+
 
 //create your first component
 const Home = (props) => {
