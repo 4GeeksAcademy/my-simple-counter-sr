@@ -1,26 +1,27 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faClock } from '@fortawesome/free-solid-svg-icons'; 
+library.add(faClock); 
 
 //create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+const Home = (props) => {
+    return (
+        <div>
+            <div className="container bg-counter">
+                <div className="row">
+                    <div className="col counter icono">
+                         <i className="fas fa-clock"></i> 
+                    </div>
+            <div className="col counter">{props.digitSix}</div>
+            <div className="col counter">{props.digitFive}</div>
+            <div className="col counter">{props.digitFour}</div>
+            <div className="col counter">{props.digitThree}</div>
+            <div className="col counter">{props.digitTwo}</div>
+            <div className="col counter">{props.digitOne}</div>
+                </div>
+            </div >
+        </div>
+    );
 };
 
 export default Home;
